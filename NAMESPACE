@@ -1,0 +1,11 @@
+import("methods")
+
+export(
+        "NBMinerParameters", 
+        "NBMiner"
+      )
+
+exportClasses(
+        "NBMinerParameter",
+        "NBMinerControl"
+        )
