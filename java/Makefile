@@ -18,7 +18,7 @@ $(JARS): $(OBJECTS)
 	$(JAR) cvf $@ $(OBJECTS)
 
 install: all
-	@cp $(JARS) ../inst/jar
+	@cp $(JARS) ../inst/java
 
 clean:
 	-@rm -f $(OBJECTS) $(JARS)

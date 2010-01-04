@@ -42,7 +42,7 @@ Michael Hahsler. A model-based frequency constraint for mining associations
 from transaction data. \emph{Data Mining and Knowledge
 Discovery,13(2):137-166,} September 2006.
 }
-\seealso{\code{\link{NBMiner}}, \code{\link[arules]{transaction-class}}}
+\seealso{\code{\link{NBMiner}}, \code{\link[arules]{transactions-class}}}
 \examples{
 data("Epub")
 

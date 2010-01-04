@@ -54,7 +54,9 @@ public class NBMiner {
         this.k = k;
         this.a = a;
         this.n = n;
-        this.maxlen = maxlen;
+        
+        if(rules) this.maxlen = maxlen-1; else this.maxlen = maxlen;
+        
         this.rules = rules;
         this.verbatim = verbatim;
         this.debug = debug;
