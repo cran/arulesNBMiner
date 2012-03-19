@@ -8,7 +8,7 @@ NBMinerParameters <- function(data, trim = 0.01, pi = 0.99, theta = 0.5,
     
     ## number of items with 0 occurrences unknown
     obs <- c(0, tabulate(itemf))
-    r <- .estim_nbinom(obs, trim = trim, missing = TRUE, verb = verbose)
+    r <- .estim_nbinom(obs, trim = trim, missing_zeros = TRUE, verb = verbose)
    
     k <- r$k
     a <- r$m * r$k
@@ -192,7 +192,7 @@ NBMinerParameters <- function(data, trim = 0.01, pi = 0.99, theta = 0.5,
     chitest$prob <- pchisq(chitest$statistic, 
         ##length(obs)-parameters-1,
         length(obs)-1,
-        log = FALSE, lower.tail = FALSE)
+        log.p = FALSE, lower.tail = FALSE)
     attr(chitest$prob, "names") <- "p-value"
 
 
