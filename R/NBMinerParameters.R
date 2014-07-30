@@ -20,9 +20,15 @@ NBMinerParameters <- function(data, trim = 0.01, pi = 0.99, theta = 0.5,
     exp <- dnbinom(0:max(itemf), size=k, prob=1/(1+a))
     
     if(plot) {
-        plot(n-cumsum(obs), type="l", xlab="r", 
-            ylab="n - cummulative frequency")
-        lines(0:max(itemf), n * (1-cumsum(exp)), col="red", lty = 2)
+        observed <- n-cumsum(obs)
+	expected <- n - n*cumsum(exp)
+	maxx <- max(itemf)
+
+	plot(0:maxx, observed, type="l", xlab="r", 
+            ylab="n - cummulative frequency", 
+	    xlim=c(0, maxx),
+	    ylim=c(0, max(observed, expected, na.rm=TRUE)))
+        lines(0:maxx, expected, col="red", lty = 2)
         legend("topright", c("data","model"), col = c(1, "red"), 
              lty = c(1, 2), inset = 0.02)
     }
@@ -89,7 +95,7 @@ NBMinerParameters <- function(data, trim = 0.01, pi = 0.99, theta = 0.5,
     if (verb) cat("using Expectation Maximization for missing zero class\n") 
 
     ## get start values for Expectation Maximization
-    counts_hist[0] <- counts_hist[1]
+    counts_hist[1] <- counts_hist[2] ### lower bound for 0 class
     par <- .estim_nbd_moments(counts_hist);
     k <- par$k
     m <- par$mean
@@ -99,7 +105,8 @@ NBMinerParameters <- function(data, trim = 0.01, pi = 0.99, theta = 0.5,
     p0 <- 0
 
     while(abs(k-k_old) > tol) {
-        i <- i+1
+	
+	i <- i+1
 
         k_old <- k
         ## update zero class
@@ -112,9 +119,12 @@ NBMinerParameters <- function(data, trim = 0.01, pi = 0.99, theta = 0.5,
         k <- par$k
         m <- par$m
 
-        if (verb) cat("iteration =",i,", zero class =", counts_hist[1],
-            ", k =",k,", m =", m,"\n" ) 
-        
+	if (verb) cat("iteration =",i,", zero class =", counts_hist[1],
+		", k =",k,", m =", m,"\n" ) 
+
+	if(is.na(k) || is.na(m) || is.na(p0)) stop(
+		"Unable to fit distribution. Did you trim too many items?")
+
     }
 
     p_nbinom <- dnbinom( c(0:(r_max-1)), size=k, mu=m); 

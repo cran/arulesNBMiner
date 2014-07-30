@@ -46,7 +46,7 @@ Discovery,13(2):137-166,} September 2006.
 \examples{
 data("Epub")
 
-param <- NBMinerParameters(Epub, trim = 0.001, plot = TRUE, verbose = TRUE)
+param <- NBMinerParameters(Epub, trim = 0.05, plot = TRUE, verbose = TRUE)
 param
 }
 \keyword{models}

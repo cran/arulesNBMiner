@@ -12,12 +12,14 @@ JAR = jar
 .java.class:
 	$(JAVAC) -target 1.4 -source 1.4 $<
 
-all: $(JARS)
+all: compile install clean
 
 $(JARS): $(OBJECTS)
-	$(JAR) cvf $@ $(OBJECTS)
+	$(JAR) cvf $@ $(OBJECTS) 
 
-install: all
+compile: $(JARS)
+
+install:
 	@cp $(JARS) ../inst/java
 
 clean:

@@ -1,4 +1,6 @@
 import("methods")
+import("arules")
+import("rJava")
 
 export(
         "NBMinerParameters", 
