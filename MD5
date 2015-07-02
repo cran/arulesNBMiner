@@ -1,12 +1,12 @@
-502f00d9ac4bcef32b918487bac293a2 *DESCRIPTION
-42481721a75c498fe5c129eadb7f656f *NAMESPACE
+9a538568f26f60a64d41ebec8a3671fb *DESCRIPTION
+904068fd4b5f1c95f6739e976a7bd5a4 *NAMESPACE
 472d5743d08f90f82b09c3a8ceccd07b *R/AAAonLoad.R
 043a7c69c88574591e2775331bebce35 *R/AllClasses.R
 8266c368dad5de640a2948efd89ac87d *R/NBMiner.R
 514b340ce528fc552cabded7e80cc5d0 *R/NBMinerParameters.R
 5979bce59dacca1909e33550f3db617d *R/parameter.R
-61f68dece0bddaade793e15b2f6c5dd8 *data/Agrawal.rda
-070c69fb3e13eaa24d3bad28d927bbc1 *inst/java/arulesNBMiner.jar
+f61c8ac9443629c5742f32c30e17dff2 *data/Agrawal.rda
+c11b2e9dfe746a4f5c0f9aa5e471177b *inst/java/arulesNBMiner.jar
 c0da6947b6dbf0f75cdd5133056539e8 *java/Association.java
 78126cead89d96196975d39bfec4ca6a *java/Itemset.java
 1085be43566a16ae332d66ae18dd6856 *java/Makefile
