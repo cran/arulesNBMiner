@@ -1,11 +1,14 @@
-9a538568f26f60a64d41ebec8a3671fb *DESCRIPTION
+2637c6d96e5f4eaa33945c9666d57d38 *DESCRIPTION
 904068fd4b5f1c95f6739e976a7bd5a4 *NAMESPACE
-472d5743d08f90f82b09c3a8ceccd07b *R/AAAonLoad.R
+ae16af504ef113a3025f1ef77aacef06 *R/AAAonLoad.R
 043a7c69c88574591e2775331bebce35 *R/AllClasses.R
 8266c368dad5de640a2948efd89ac87d *R/NBMiner.R
 514b340ce528fc552cabded7e80cc5d0 *R/NBMinerParameters.R
 5979bce59dacca1909e33550f3db617d *R/parameter.R
-f61c8ac9443629c5742f32c30e17dff2 *data/Agrawal.rda
+855e0357e5e9725425d07e9c6aed4442 *README.md
+c3597c46e5facd751090a93c0b427922 *build/partial.rdb
+74644bbf154b27076dd62fd75f6b7b7f *data/Agrawal.rda
+3841265615bf73d6d9186e8ca5dfe8a3 *inst/CITATION
 c11b2e9dfe746a4f5c0f9aa5e471177b *inst/java/arulesNBMiner.jar
 c0da6947b6dbf0f75cdd5133056539e8 *java/Association.java
 78126cead89d96196975d39bfec4ca6a *java/Itemset.java
@@ -15,5 +18,5 @@ ebe2137f6551a9f14ff3ae77bc687aa6 *java/NBMiner.java
 4f0889df2f45fcd5ab472259fd5ef3cd *java/Rule.java
 61cbf418859180c9ee91b35c8f9869fb *java/SparseSetOfItemsets.java
 564fc323b1918d4cfe41c60224894e2e *man/Agrawal.Rd
-000995ed4abbd1d742d18583f23dce58 *man/NBMiner.Rd
+26510bcb98c77286ec6aa8ed398de317 *man/NBMiner.Rd
 540a7c884ba6ebc959cda4a04bacf540 *man/NBMinerParameters.Rd
