@@ -26,7 +26,7 @@ data(Agrawal)
 summary(Agrawal.pat)
 summary(Agrawal.db)
 
-## the data sets was generated with the following code
+## the data set was generated with the following code
 \dontrun{
 Agrawal.pat <- random.patterns(1000, nPats = 2000,  method = "agrawal",
     lPats = 2, corr = 0.5, cmean = 0.5, cvar = 0.1, iWeight = NULL,
@@ -41,5 +41,8 @@ for mining association rules in large databases. In Jorge B.  Bocca,
 Matthias Jarke, and Carlo Zaniolo, editors, \emph{Proceedings of the 20th
 International Conference on Very Large Data Bases, VLDB}, pages 487-499,
 Santiago, Chile.
+}
+\seealso{
+\code{\link[arules:random.transactions]{arules::random.transactions()}}
 }
 \keyword{datasets}

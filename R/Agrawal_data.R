@@ -19,13 +19,14 @@
 #' International Conference on Very Large Data Bases, VLDB}, pages 487-499,
 #' Santiago, Chile.
 #' @keywords datasets
+#' @seealso [arules::random.transactions()]
 #' @examples
 #' data(Agrawal)
 #'
 #' summary(Agrawal.pat)
 #' summary(Agrawal.db)
 #'
-#' ## the data sets was generated with the following code
+#' ## the data set was generated with the following code
 #' \dontrun{
 #' Agrawal.pat <- random.patterns(1000, nPats = 2000,  method = "agrawal",
 #'     lPats = 2, corr = 0.5, cmean = 0.5, cvar = 0.1, iWeight = NULL,
@@ -34,6 +35,5 @@
 #'     patterns = Agrawal.pat)
 #' }
 NULL
-
 
 
